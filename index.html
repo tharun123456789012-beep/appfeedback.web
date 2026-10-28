@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kindred — Feedback Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="grain"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Kindred home">
+      <span class="brand-mark">k.</span>
+      <span>KINDRED<span class="brand-dot">.</span></span>
+    </a>
+    <div class="top-note"><span class="live-dot"></span> A little space to be heard</div>
+    <a class="top-link" href="#feedback">Share a thought <span>↗</span></a>
+  </header>
+
+  <main class="layout">
+    <section class="intro">
+      <div class="eyebrow"><span class="eyebrow-line"></span> THE FEEDBACK STUDIO</div>
+      <h1>Good things<br>grow from <em>listening.</em></h1>
+      <p class="intro-copy">Your thoughts make what we do better. Leave a little feedback, a big idea, or anything in between.</p>
+      <div class="handwritten">Every perspective matters <span>✳</span></div>
+
+      <div class="mini-stats">
+        <div class="stat-icon">✦</div>
+        <div><strong>Thoughtfully heard.</strong><span>Made for honest, helpful feedback.</span></div>
+      </div>
+      <div class="decor-orbit orbit-a"></div>
+      <div class="decor-orbit orbit-b"></div>
+    </section>
+
+    <section class="feedback-card" id="feedback">
+      <div class="card-heading">
+        <div>
+          <div class="section-kicker">LET'S MAKE IT BETTER</div>
+          <h2>Leave your mark<span>.</span></h2>
+        </div>
+        <div class="card-sparkle">✳</div>
+      </div>
+
+      <form id="feedbackForm">
+        <label class="field-label">01 <span>How was your experience?</span></label>
+        <div class="rating-row" role="radiogroup" aria-label="Rate your experience">
+          <button class="rating" type="button" data-rating="1" aria-pressed="false"><span>☹</span><small>Not great</small></button>
+          <button class="rating" type="button" data-rating="2" aria-pressed="false"><span>🙁</span><small>Could improve</small></button>
+          <button class="rating" type="button" data-rating="3" aria-pressed="false"><span>😐</span><small>It's okay</small></button>
+          <button class="rating" type="button" data-rating="4" aria-pressed="false"><span>🙂</span><small>Pretty good</small></button>
+          <button class="rating" type="button" data-rating="5" aria-pressed="false"><span>☺</span><small>Loved it</small></button>
+        </div>
+
+        <label class="field-label" for="category">02 <span>What is this about?</span></label>
+        <div class="select-wrap">
+          <select id="category" name="category" required>
+            <option value="" disabled selected>Choose a topic</option>
+            <option>Website experience</option>
+            <option>Design & visuals</option>
+            <option>Features & ideas</option>
+            <option>Something went wrong</option>
+            <option>Just saying hello</option>
+          </select>
+          <span>⌄</span>
+        </div>
+
+        <label class="field-label" for="message">03 <span>Tell us a little more</span></label>
+        <div class="textarea-wrap">
+          <textarea id="message" name="message" rows="4" maxlength="700" placeholder="Your thoughts, ideas, tiny details… we're listening." required></textarea>
+          <div class="char-count"><span id="charCount">0</span> / 700</div>
+        </div>
+
+        <label class="field-label" for="email">04 <span>Your email <small>(optional)</small></span></label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" />
+
+        <div class="form-bottom">
+          <p><span class="lock">✧</span> Shared with care. No noise, just listening.</p>
+          <button class="submit-btn" type="submit">Send feedback <span>↗</span></button>
+        </div>
+        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 KINDRED STUDIO</span>
+    <span>MADE WITH CURIOSITY <b>✳</b></span>
+    <a href="#feedback">Back to the form ↑</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
